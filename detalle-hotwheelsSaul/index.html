@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Un pequeño detalle ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         CARTA CERRADA
+    ========================== -->
+
+    <section id="inicio" class="pantalla activa">
+
+        <div class="sobre">
+
+            <div class="tapa"></div>
+
+            <div class="corazon-sobre">
+                ❤️
+            </div>
+
+        </div>
+
+        <h1>💌 Tengo algo para ti...</h1>
+
+        <p class="indicacion">
+            Toca la carta para abrirla
+        </p>
+
+        <button onclick="abrirCarta()">
+            Abrir carta ❤️
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         PRIMER MENSAJE
+    ========================== -->
+
+    <section id="mensaje" class="pantalla">
+
+        <div class="carta-contenido">
+
+            <p class="pequeno">
+                PARA TI ❤️
+            </p>
+
+            <h2>
+                Hola, Saul
+            </h2>
+
+
+            <!-- FOTO -->
+
+            <div class="foto-contenedor">
+
+                <img
+                    src="img/foto.jpg"
+                    alt="Nuestra foto"
+                >
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div class="texto-mensaje">
+
+                <p>
+                    Sé que no es un detallote
+                    y tampoco es algo real...
+                </p>
+
+                <p>
+                    pero lo hago con mucho
+                    aprecio y cariño. ❤️
+                </p>
+
+                <p>
+                    Quería tener un pequeño detalle
+                    contigo y hacerlo de una manera
+                    diferente.
+                </p>
+
+            </div>
+
+
+            <button onclick="mostrarRamo()">
+                Siguiente 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RAMO
+    ========================== -->
+
+    <section id="ramo" class="pantalla">
+
+        <div class="ramo-contenido">
+
+            <p class="pequeno">
+                UN PEQUEÑO REGALO PARA TI
+            </p>
+
+
+            <h2>
+                💙 Para alguien especial 💙
+            </h2>
+
+
+            <!-- RAMO -->
+
+            <div class="ramo">
+
+                <div class="brillo"></div>
+
+                <img
+                    src="img/ramo.png"
+                    alt="Ramo de rosas azules con Hot Wheels"
+                >
+
+            </div>
+
+
+            <!-- MENSAJE FINAL -->
+
+            <div class="mensaje-final">
+
+                <h3>
+                    ❤️ Te quiero mucho ❤️
+                </h3>
+
+                <p>
+                    Me gusta mucho la forma en la que poco a poco nos estamos conociendo. Quizás todavía nos falte mucho por descubrir el uno del otro, pero me alegra que nuestros caminos se hayan cruzado. ❤️
+
+No sé qué nos depare el tiempo, pero sí espero de corazón que todo vaya bien entre nosotros, que podamos seguir compartiendo momentos, conociéndonos cada vez más y construyendo algo bonito, sin prisas y siendo nosotros mismos.
+
+Solo quiero disfrutar de este proceso y ver hasta dónde nos puede llevar. ✨🤍
+
+                </p>
+
+                <div class="decoracion">
+                    🏎️ 💙 🏎️ 💙 🏎️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+
+    function abrirCarta() {
+        const inicio = document.getElementById("inicio");
+        const mensaje = document.getElementById("mensaje");
+
+        inicio.classList.remove("activa");
+
+        setTimeout(() => {
+            inicio.style.display = "none";
+            mensaje.style.display = "flex";
+            mensaje.classList.add("activa");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 700);
+    }
+
+    function mostrarRamo() {
+        const mensaje = document.getElementById("mensaje");
+        const ramo = document.getElementById("ramo");
+
+        mensaje.classList.remove("activa");
+
+        setTimeout(() => {
+            mensaje.style.display = "none";
+            ramo.style.display = "flex";
+            ramo.classList.add("activa");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 700);
+    }
+</script>
+
+
+</body>
+
+</html>
